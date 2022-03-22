@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <h1>E<span>M</span>S</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="admin">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">designations</a></li>
+                    <li><a href="#">contact</a></li>
+
+                </ul>
+
+            </div>
+                       <form th:action="@{/logout}" method="post">
+       						 <input id="button1" type="submit" class="button1" value="Logout" />
+  					  </form>
+        </div>
+    </header>
+    <section class="home common">
+        <div class="home-inner">
+            <div class="text">
+                <h1><span>W</span>ell<span>C</span>ome !</h1>
+                <p>It is a greate organization ,where you can find all the employee details across the organization..it is the World's largest organization..!</p>
+                <a href="#" class="btn">Learn more about company</a>
+            </div>
+
+
+       
+        <div class="List1">
+        <img th:src="@{/images/employee.png}" alt="employee pic">
+            <ul>
+               <li><a href=create.html >Create employee...</a></li>
+                </ul> 
+           </div>
+           <div class="List2">
+              <img th:src="@{/images/display-image.jpg}" alt="employee pic">  
+                <ul>  
+                <li><a href="display.html" >Display Employees...</a></li>
+             
+            </ul>
+        </div>
+    </div>
+    </section>
+
+</body>
+</html>

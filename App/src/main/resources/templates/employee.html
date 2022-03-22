@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/02f308581e.js" crossorigin="anonymous"></script>
+   
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #C8C8C8;">
+        <div class="container bc">
+            <a class="navbar-brand" href="#"><h2 sytle="font-size: 10px;">EmployeeManagementSystem</h1></a>
+            <a class="navbar-brand" href="#">
+                
+
+            </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link active" id="navItem1" href="#homeSection">
+                        Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                    <a class="nav-link" href="#serviceSection" id="navItem2" style="color: black;">Services</a>
+                    <a class="nav-link" href="#aboutSection" id="navItem3" style="color: black;">About</a>
+                    <a class="nav-link" href="#contactUs" id="navItem4" style="color: black;">Contact</a>
+                     <form th:action="@{/logout}" method="post">
+       						 <input type="submit" class="btn btn-info" value="Logout" />
+  					  </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="banner-section-bg-container d-flex justify-content-center flex-column">
+        <div class="text-center" style="color: white;">
+            <h1 class="banner-heading mb-3">Get info</h1>
+            <p class="banner-caption mb-4">get start</p>
+            
+        </div>
+    </div>
+    <div class="banner-section-bg-container d-flex justify-content-center flex-column">
+        <div class="text-center" style="color: black;">
+            <h1 class="banner-heading mb-3">WellCome <span style="color: red;">!</span></h1>
+            
+            
+        </div>
+    </div>
+    <div class="home-section pt-5 pb-5" id="homeSection">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    
+
+        
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="home-card p-3 mb-3">
+                        <img src="images/depart.jpg" class="home-card-image" />
+                        <h1 class="home-card-title mt-3">departments</h1>
+                        <p class="home-description">
+                            Department develops and executes overall business strategies. 
+                            It is responsible for the entire organization. General management 
+                            deals with determining overall business strategies, planning, 
+                            monitoring execution of the plans, decision making, and guiding the workforce
+                             and maintaining punctuality and disciplinary issues. </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="home-card p-3 mb-3">
+                        <img src="images/culture.jpg" class="home-card-image" />
+                        <h1 class="home-card-title mt-3">culture</h1>
+                        <p class="home-description">
+                            Employers have a vital role in perpetuating a strong culture, starting with recruiting
+                             and selecting applicants who will share the organization's beliefs and thrive in that culture,
+                              developing orientation, training and performance management programs that outline and reinforce 
+                              the organization's core values and ensuring that appropriate rewards and recognition go to employees
+                               who truly embody the values.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="home-card p-3 mb-3">
+                        <img src="images/sources.jpg" class="home-card-image" />
+                        <h1 class="home-card-title mt-3">sources</h1>
+                        <p class="home-description">
+                            We are having two primary sources for the organization: external information, 
+                            in which documentation is made available to the public from a third party;
+                             and internal information, which consists of data created for the sole use of the 
+                             company that produces it, such as personnel files, trade secrets, and minutes of board meetings.     
+                                             </p>
+                    </div>
+                </div>   
+            </div> 
+        </div>      
+    </div>
+    <div class="services-section pt-5 pb-5" id="serviceSection">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+                    <div class="about-card shadow p-3 mb-3">
+                        
+                        <h1 class="about-card-title">services</h1>
+                        <p>The features of HR self-service software include the following:
+
+                            payroll capabilities, such as online access to pay stubs, the ability to change tax withholding and deduction amounts, and logging work time and hours;
+                            the ability to shop for and choose benefit programs and manage open enrollment and other changes, such as major life events;
+                            the ability to make changes to retirement investment plans, such as changing employee contributions, setting up loans and making withdrawals;
+                            expense management;
+                     </div>
+                </div>
+            </div>
+        </div>                
+    </div>
+    <div class="about-section pt-5 pb-5" id="aboutSection">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-12">
+                    <div class="about-card shadow p-3 mb-3">
+                        
+                        <h1 class="about-card-title">About</h1>
+                        <p>The features of HR self-service software include the following:
+
+                            payroll capabilities, such as online access to pay stubs, the ability to change tax withholding and deduction amounts, and logging work time and hours;
+                            the ability to shop for and choose benefit programs and manage open enrollment and other changes, such as major life events;
+                            the ability to make changes to retirement investment plans, such as changing employee contributions, setting up loans and making withdrawals;
+                            expense management; and
+                            business travel management.
+                            Benefits of employee self-service
+                            Employee self-service systems can save time for HR administrators, while giving employees more autonomy to manage their benefits and payroll configurations. They can also help make employees feel more connected to their organizations and, possibly, happier in their jobs, and more productive.
+                            
+                            Challenges of employee self-service
+                            Integrating multiple employee self-service channels -- su</p>
+                    </div>
+                </div>
+            </div>
+        </div>                
+   
+    </div>
+    <div class="contactUs-section pt-5 pb-5" id="contactUs">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="contactUs-section-heading">Follow Us</h1>
+                    <div class="d-flex flex-row justify-content-center">
+                        <div class="contactUs-icon-container">
+                            <i class="fab fa-twitter icon"></i>
+                        </div>&nbsp;&nbsp;&nbsp;
+                        <div class="contactUs-icon-container">
+                            <i class="fab fa-instagram icon"></i>
+                        </div>&nbsp;&nbsp;&nbsp;
+                        <div class="contactUs-icon-container">
+                            <i class="fab fa-facebook icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img src="images/admin-logo.png" width="30%" />
+                            <h1 class="footer-section-mail-id">ems@india.com</h1>
+                            <p class="footer-section-address">
+                                123 Ayur Vigyan Nagar, New Delhi, India.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

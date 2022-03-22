@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin</title>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <h1>E<span>M</span>S</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="admin">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">designations</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="bg-modal">
+        <div class="modal-contents">
+    
+            
+           <h1><span>C</span>reate <span>E</span>mployee</h1>
+    
+            <form action="#" th:action="@{/saveEmployee}" th:object="${employee}" method="POST"  >
+            
+                <input type="text" id="Fname" th:field="*{firstName}" placeholder="FirstName" th:errorclass="is-invalid">
+                <div th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="invalid-feedback"></div>
+                
+                <input type="text" id="Lname" th:field="*{lastName}" placeholder="LastName" th:errorclass="is-invalid">
+                <div th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="invalid-feedback"></div>
+                
+                <input type="text" id="designation" th:field="*{designation}" placeholder="Designation" th:errorclass="is-invalid">
+                <div th:if="${#fields.hasErrors('designation')}" th:errors="*{designation}" class="invalid-feedback"></div>
+                
+                <input type="text" id="place" th:field="*{place}" placeholder="place" th:errorclass="is-invalid">
+                <div th:if="${#fields.hasErrors('place')}" th:errors="*{place}" class="invalid-feedback"></div>
+                
+                <input type="text" id="email" th:field="*{email}" placeholder="E-Mail" th:errorclass="is-invalid">
+                <div th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="invalid-feedback"></div>
+                
+                <input type="password" id="password" th:field="*{password}" placeholder="password" th:errorclass="is-invalid">
+                <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="invalid-feedback"></div>
+                <button type="submit" class="button" >Submit</button>
+            </form>
+    
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

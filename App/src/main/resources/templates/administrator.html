@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Admin</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="css/css1.css">
+ 
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <h1>E<span>M</span>S</h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="login">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">designations</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="home common">
+        <div class="home-inner">
+            <div class="text">
+                <h1><span>W</span>ell<span>C</span>ome !</h1>
+                <p>It is a greate organization ,where you can find all the employee details across the organization..it is the World's largest organization..!</p>
+                <a href="#" class="btn">Learn more about company</a>
+            </div>
+           
+
+       
+            <div class="bg-modal">
+                <div class="modal-contents">
+            
+                    
+                   <h1>ADMIN</h1>
+            
+            <form action="#" th:action="@{/administratorCheck}" th:object="${admin}" method="POST"  >
+            
+
+                
+                <input type="text" id="username" th:field="*{username}" placeholder="UserName" th:errorclass="is-invalid">
+                <div th:if="${#fields.hasErrors('username')}" th:errors="*{username}" class="invalid-feedback"></div>
+                
+                <input type="password" id="password" th:field="*{password}" placeholder="password" th:errorclass="is-invalid">
+                <div th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="invalid-feedback"></div>
+                <button type="submit" class="button" >Submit</button><br><br>
+                <a href="login" class="link">Login</a>&nbsp;<span>|</span>&nbsp;<a href="signup.html" class="link">SignUp</a>
+            </form>
+            
+                </div>
+        
+            </div>
+    </div>
+    </section>
+</body>
+</html>
